@@ -540,7 +540,7 @@ void EIO_List(uv_work_t* req) {
 }
 
 void EIO_Flush(uv_work_t* req) {
-  VoidBaton* data = static_cast<VoidBaton*>(req->data);
+  FlushBaton* data = static_cast<FlushBaton*>(req->data);
 
   DWORD purge_all = PURGE_RXCLEAR | PURGE_TXABORT | PURGE_TXCLEAR; //PURGE_RXABORT | 
   if (!PurgeComm((HANDLE)data->fd, purge_all)) {
