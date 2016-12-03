@@ -104,7 +104,7 @@ void EIO_Open(uv_work_t* req) {
   dcb.fInX = FALSE;
   dcb.fOutX = FALSE;
   dcb.fOutxDsrFlow = FALSE;
-  dcb.fOutxCtsFlow = FALSE;
+  dcb.fOutxCtsFlow = TRUE;
   dcb.fRtsControl = RTS_CONTROL_ENABLE;
 
   dcb.fBinary = true;
